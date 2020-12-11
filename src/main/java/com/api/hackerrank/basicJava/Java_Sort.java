@@ -52,7 +52,7 @@ class StudentBuilder {
 		return this;
 	}
 
-	public Student getStuden() {
+	public Student getStudent() {
 		return new Student(studentId, firstName, cgpa);
 	}
 
@@ -65,7 +65,7 @@ public class Java_Sort {
 		List<Student> students = new ArrayList<Student>();
 		for (int iter = 0; iter < noOfStudents; iter++) {
 			students.add(new StudentBuilder().setStudentId(scanner.nextInt()).setFirstName(scanner.next())
-					.setCgpa(scanner.nextDouble()).getStuden());
+					.setCgpa(scanner.nextDouble()).getStudent());
 		}
 		Collections.sort(students, Comparator.comparing(Student::getCgpa).reversed()
 				.thenComparing(Student::getFirstName).thenComparing(Student::getStudentId));

@@ -13,11 +13,10 @@ public class Java_Sort_2 {
 		List<Student> students = new ArrayList<Student>();
 		for (int iter = 0; iter < noOfStudents; iter++) {
 			students.add(new StudentBuilder().setStudentId(scanner.nextInt()).setFirstName(scanner.next())
-					.setCgpa(scanner.nextDouble()).getStuden());
+					.setCgpa(scanner.nextDouble()).getStudent());
 		}
 		students.stream().sorted(Comparator.comparing(Student::getCgpa).reversed().thenComparing(Student::getFirstName)
 				.thenComparing(Student::getStudentId)).map(s -> s.getFirstName()).forEach(System.out::println);
-
 		scanner.close();
 	}
 
