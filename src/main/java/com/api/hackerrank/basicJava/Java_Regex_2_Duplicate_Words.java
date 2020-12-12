@@ -17,6 +17,9 @@ public class Java_Regex_2_Duplicate_Words {
 			Matcher m = p.matcher(sentence);
 			// Check for subsequences of input that match the compiled pattern
 			while (m.find()) {
+				System.out.println(m.group(0));
+				System.out.println(m.group(1));
+				System.out.println(m.group(2));
 				sentence = sentence.replaceAll(m.group(0), m.group(1));
 			}
 			System.out.println(sentence);
